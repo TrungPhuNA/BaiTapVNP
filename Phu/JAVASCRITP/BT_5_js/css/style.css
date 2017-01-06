@@ -1,0 +1,87 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background: #F4F4F4;
+}
+#container{
+	width: 700px;
+	margin: 100px auto;	
+
+
+}
+#container #form-input{
+	background: #fff;
+	box-shadow: 2px 2px 5px #ddd;
+}
+#container #form-input #down-icon{
+	color: #4d4d4d;
+	font-weight: bold;
+	font-size: 26px;
+	cursor:pointer;
+	position: relative;
+	left: 30px;
+	display: none;
+}
+#container #list-sk {
+	list-style: none;
+}
+#but{
+	height: 30px;
+	border-top: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+	display: none;
+}
+#but p{
+	display: inline;
+}
+#but p,a{
+	color: #888;
+    margin: 3px;
+    padding: 2px 7px;
+	display: inline-block;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+.active{
+	border: 1px solid #888;
+}
+#but :hover{
+	border: 1px solid #888;
+}
+#container #list-sk li{
+	border-top: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+	padding: 15px;
+}
+#container #list-sk li span{
+	text-align: center;
+
+}
+#container #list-sk li #checkb{
+	margin-right: 20px;
+}
+#container #form-input  #inputname{
+	padding: 16px 16px;
+	padding-left: 70px;
+    border: none;
+    margin-left: 0px;
+    font-size: 24px;
+    font-weight: 500;
+    border-radius: 10px;
+    
+    width: 500px;
+    background: rgba(0, 0, 0, 0.003);
+    background: #fff;
+    outline: none;
+}
+.fa-times{
+	cursor: pointer;
+	float: right;
+	
+}
+#container #list-sk li:hover .fa-times{
+	display: block;
+}

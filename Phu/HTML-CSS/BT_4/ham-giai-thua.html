@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hàm Tính Giai Thừa</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		"use strict";
+		function giaithua(n) {
+			var i ;
+			var gt = 1 ;
+			for( i = 1 ; i <= n; i++){
+				gt *= i;
+			}
+			return gt;
+		}
+		console.log(giaithua(5));	
+	</script>
+</body>
+</html>

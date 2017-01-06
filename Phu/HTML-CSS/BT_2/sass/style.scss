@@ -1,0 +1,86 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+$bg : #1ea580;
+#container{
+	margin:20px auto;
+	width:300px;
+
+	.link-profile{
+		.icon-user{
+			background:url('../image/icon-user.png') no-repeat center;
+			padding:13px;
+            margin-left:6px;
+		}
+		background:#1eb98f;
+		padding:13px;
+		display: block;
+		
+		text-decoration: none;
+		border-radius:5px;
+
+		span{
+			margin-left:10px;
+			color: white;
+		}
+		.icon-dowup{
+			background:url('../image/icon-dowup.png') no-repeat center;
+			float:right;
+			padding:10px;
+		}
+
+	}
+
+	ul{
+		list-style:none;
+        margin-top:25px;
+        #setting{
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        #logout{
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        %icon{
+            padding:13px;
+        }
+        .setting{
+            @extend %icon;
+            background:url('../image/icon-stiing.png') no-repeat center;
+            
+        }
+        .icon-up{
+            @extend %icon;
+            background:url('../image/icon-dow.png') no-repeat center;
+            float:right;
+            margin-top: -37px;
+            margin-right:-10px;
+        }
+
+        .password{
+            @extend %icon;
+            background:url('../image/icon-key.png') no-repeat center;
+        }
+
+        .logout{
+            @extend %icon;
+            background:url('../image/icon-pow.png') no-repeat center;
+        }
+
+		li{
+			a{
+				text-decoration:none;
+                padding:20px;
+                background:#1eb98f;
+                display:block;
+                color:white;
+                &:hover{
+                    background:$bg;
+                }
+
+			}
+		}
+	}
+}

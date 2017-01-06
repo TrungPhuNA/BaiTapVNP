@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bai Tap 4</title>
+</head>
+<body>
+	<script type="text/javascript">
+		"use strict";
+		var name  = "TrungPhu";
+		var count = name.length;
+		// lấy random giá tri nằm trong khoảng  ....
+		function rand(min,max)
+		{
+		    return Math.floor(Math.random()*(max-min+1)+min);
+		}
+
+		function getRandom()
+		{
+		    var name  = "TrungPhu";
+			var count = name.length;
+			var strqk = "";
+
+		    for( var i = 0; i < count; i++ )
+		    {
+		        strqk += name.charAt(Math.floor(Math.random() * name.length));
+		    }
+		    var start = rand(1,count);
+		    var stop  = rand(1,count);
+		    if (stop < start) {
+		    	 stop  = start;
+		    }
+
+		    var kq = strqk.substring(rand(1,count), rand(1,count));
+		    return kq;
+		}
+		
+
+		
+		console.log(getRandom());
+
+	
+		
+	</script>
+</body>
+</html>

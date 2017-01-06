@@ -1,0 +1,59 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+#container {
+  margin: 20px auto;
+  width: 300px; }
+  #container .link-profile {
+    background: #1eb98f;
+    padding: 13px;
+    display: block;
+    text-decoration: none;
+    border-radius: 5px; }
+    #container .link-profile .icon-user {
+      background: url("../image/icon-user.png") no-repeat center;
+      padding: 13px;
+      margin-left: 6px; }
+    #container .link-profile span {
+      margin-left: 10px;
+      color: white; }
+    #container .link-profile .icon-dowup {
+      background: url("../image/icon-dowup.png") no-repeat center;
+      float: right;
+      padding: 10px; }
+  #container ul {
+    list-style: none;
+    margin-top: 25px; }
+    #container ul #setting {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px; }
+    #container ul #logout {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px; }
+    #container ul .setting, #container ul .icon-up, #container ul .password, #container ul .logout {
+      padding: 13px; }
+    #container ul .setting {
+      background: url("../image/icon-stiing.png") no-repeat center; }
+    #container ul .icon-up {
+      background: url("../image/icon-dow.png") no-repeat center;
+      float: right;
+      margin-top: -37px;
+      margin-right: -10px; }
+    #container ul .password {
+      background: url("../image/icon-key.png") no-repeat center; }
+    #container ul .logout {
+      background: url("../image/icon-pow.png") no-repeat center; }
+    #container ul li a {
+      text-decoration: none;
+      padding: 20px;
+      background: #1eb98f;
+      display: block;
+      color: white; }
+      #container ul li a:hover {
+        background: #1ea580; }
+     #container ul li a span{
+        margin-left: 10px;
+     }
+
+/*# sourceMappingURL=style.css.map */

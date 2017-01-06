@@ -1,0 +1,73 @@
+
+.br{width: 1000px;margin: 0px auto;}
+.wrapper{background: #000;width: 100%;}
+.header img{width: 100%;padding-top: 10px ;padding-bottom: 20px;height: 110px;}
+.main-menu{ width: 100%;height: 90px;background: url('../img/bg-navigation.png') repeat center;margin-bottom: 30px;}
+.main-menu .nav{list-style-type: none;width: 970px;margin: 0px auto}
+.main-menu .nav li{float: left;}
+.main-menu .nav li a{line-height: 120px;padding: 0px 20px;color: white;font-size: 18px;font-weight: 500;text-decoration: none;}
+
+.content{background: white;margin-bottom: 50px;}
+.hr-top{margin: 0px;padding: 9px 0px;background: #595959}
+.content h1{color:#595959;text-align: center;font-weight: 200;font-size: 40px; margin: 5px;}
+.content h2{color: #595959;font-weight: normal;font-size: 30px;}
+.item-main{padding: 20px 60px;}
+.text1,.text2{color:#595959;font-size: 20px;}
+.text1{margin-left:60px;}
+.text2{margin-left: 120px;}
+p.text2 {
+    font-weight: 600;
+}
+p.text3{font-size: 18px;line-height: 1.5}
+.img{text-align: center;padding: 100px 0px;}
+.img .img-sty{margin:0px 65px}
+
+.img3{}
+.img3 img{margin: 10px 15px 150px 15px;}
+
+.footer{width: 100%;background: #595959;margin: 0px auto;height: 150px;}
+.logo-footer{text-align:center;padding-top:40px; }
+.nav-footer{}
+.nav-footer ul{width: 400px;margin: 0px auto;}
+.nav-footer ul li{list-style: none;display: block;float: left;}
+.nav-footer ul li a{color: white;padding: 0px 9px;font-size: 16px;border-left: 1px solid white;text-decoration: none;}
+.footer p{color: white;text-align: center;}
+
+
+
+
+.wrapper2{
+	background: #5b4a02;
+	width: 100%;
+}
+.header2 {padding-top: 10px;padding-bottom: 20px;}
+.header2 div{width: 100%;height: 50px;background: #7f6000;}
+.header2 .logo{text-align: center;line-height: 50px;color: white;font-size: 20px;}
+
+
+.top-menu{ width: 100%;height: 50px;background:#7f6000;margin-bottom: 30px;}
+.top-menu .nav{list-style-type: none;width: 1000px;margin: 0px auto}
+.top-menu .nav li{float: left;}
+.top-menu .nav li a{line-height: 60px;padding: 0px 20px;color: white;font-size: 18px;font-weight: 500;text-decoration: none;text-transform: uppercase;}
+
+.main{width: 1000px;background:#5b4a02;margin:20px auto;padding-bottom:140px;background: white}
+.item1{padding: 20px 40px;border-bottom: 2px dotted #000 ;margin: 0px 20px;}
+.item1 h1{text-transform: uppercase;color: #68431b;font-size: 30px;text-align: center;font-weight: bold;}
+.item1 .i140 {width: 240px;height: 240px;background:#7f6000;float: left;margin-left: 40px;}
+.item1 .i140 p{color: white;font-size: 36px ;font-weight: bold;line-height: 170px;text-align:center;}
+.item1 h2{text-transform: uppercase;color: #68431b;font-size: 20px;font-weight: bold;}
+.item1 .i160 {width: 160px;height: 160px;background:#7f6000;float: left;margin-left: 15px;}
+.item1 .i160 p{color: white;font-size: 20px ;font-weight: bold;line-height: 130px;text-align:center;}
+
+.item1 .i180 {width: 180px;height: 120px;background:#7f6000;float: left;margin-left: 30px;}
+.item1 .i180 p{color: white;font-size: 20px ;font-weight: bold;line-height: 90px;text-align:center;}
+
+.footer2{width: 100%;background: #5a3200;margin: 0px auto;height: 150px;padding-top: 20px;}
+
+.footer2 .logo-footer2{text-align:center;width: 200px;height: 50px;background: #5b4a02 ;margin:0px auto;margin-bottom:5px;}
+.footer2 .logo-footer2 p{text-align: center;color: white}
+
+.nav-footer2 ul{width: 400px;margin: 0px auto;}
+.nav-footer2 ul li{list-style: none;display: block;float: left;}
+.nav-footer2 ul li a{color: white;padding: 0px 9px;font-size: 16px;border-left: 1px solid white;text-decoration: none;}
+.footer2 p{color: white;text-align: center;}
