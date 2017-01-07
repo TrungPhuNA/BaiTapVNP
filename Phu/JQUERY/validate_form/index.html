@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Validate</title>
+	<link rel="stylesheet" href="">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<style>
+		.container{
+			width: 500px;
+			margin: 50px auto;
+		}
+		.input-group{
+			margin: 10px 0;
+		}
+		.input-group input{
+			color:red;
+		}
+		.add_red{
+			border: 1px solid red;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form id="validate">
+		    <div class="input-group">
+		      	<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+		      	<input id="email" type="text" class="form-control" name="email" placeholder="Email">
+
+		    </div>
+	
+		    <div class="input-group">
+		      	<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+		     	<input id="name" type="text" class="form-control" name="name" placeholder="Name">
+		    </div>
+		  
+		    <div class="input-group">
+		      	<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+		     	<input id="age" type="text" class="form-control" name="age" placeholder="Tuoi">
+		    </div>
+		   
+		    <div class="input-group">
+		      	<input type="submit" class=" btn-danger" value="Submit">
+		    </div>
+	  	</form>
+	</div>
+
+	<script>
+		
+		$(function() {
+			var $email = $('#email');
+			var $name  = $('#name');
+			var $age   = $('#age');
+
+			$('#validate').submit(function(e) {
+				e.preventDefault();
+				//console.log($email.val());
+				if($email.val() == "" ) {
+					$email.addClass('add_red');
+				}else {
+					$email.removeClass('add_red');
+				};
+				if($name.val() == "" ) {
+					$name.addClass('add_red');
+				}else {
+					$name.removeClass('add_red');
+				};
+				if($age.val() == "" ) {
+					$age.addClass('add_red');
+				}else {
+					$age.removeClass('add_red');
+				};
+			});
+		});
+	</script>
+	
+</body>
+</html>

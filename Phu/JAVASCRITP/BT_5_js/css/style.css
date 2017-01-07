@@ -80,6 +80,7 @@ body{
 .fa-times{
 	cursor: pointer;
 	float: right;
+	display: none;
 	
 }
 #container #list-sk li:hover .fa-times{
