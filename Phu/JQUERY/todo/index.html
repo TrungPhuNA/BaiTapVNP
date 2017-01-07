@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ứng Dụng TodoMVC</title>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="container">
+	
+		<section id="form-input">
+			
+			<form>
+				<i class="fa fa-angle-down" id="down-icon" type="button"></i>
+				<input type="text" id="inputname" placeholder="What needs to be do ?">
+
+				<ul id="list-sk">
+					
+				</ul>
+				<div id="but">
+					<p id="count_li"></p>
+					<a href="#" id="all" class="active">all</a>
+					<a href="#">Active</a>
+					<a href="#">Complated</a>
+				</div>
+				
+
+			</form>
+		</section>
+
+		<script>
+			var $input = $('#inputname');
+			var $downicon  = $("#down-icon");
+			var $but       = $('#but');
+			var $li        = $('#list-sk');
+			
+			var $count     = $('#count_li');
+			function handling(e) {
+				e.preventDefault();
+				if($input.val() !='') {
+					$downicon.css('display', 'inline-block');
+					$but.css('display', 'block');
+					
+					$li.append("<li> <input type='checkbox' class='checkb' /> <span>" +  $input.val() + "</span> <i class='fa fa-times'></i></li>");
+					var $i_close    = $('.fa-times');
+					$count.text( $i_close.length + "  item ") ;
+					console.log($i_close);
+					
+					for( var i = 0 ; i < $i_close.length ; i++) {
+						
+
+						$i_close[i].click(function() {
+							
+							//$(this).parent().remove();
+						});
+					}
+				}
+			}
+ 			$(function() {
+ 				$input.keydown(function(e) {
+ 					if(e.keyCode == 13) {
+ 						handling(e);
+ 					}
+ 				});
+			});
+		</script>
+	</div>
+</body>
+</html>
