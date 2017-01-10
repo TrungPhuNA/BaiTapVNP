@@ -48,12 +48,10 @@
 					var $i_close    = $('.fa-times');
 					$count.text( $i_close.length + "  item ") ;
 					console.log($i_close);
-					
 					for( var i = 0 ; i < $i_close.length ; i++) {
-						
-
+						console.log(i);
 						$i_close[i].click(function() {
-							
+							alert("đã click")
 							//$(this).parent().remove();
 						});
 					}
@@ -67,6 +65,24 @@
  				});
 			});
 		</script>
+	</div>
+
+	<div class="ajax">
+		<script type="text/javascript">
+			$(function() {
+				$.ajax({
+					url : '',
+					type : "GET",
+					data : {
+						a : 'b'
+					},
+					success : function(response) {
+						console.log('response');
+						$('#result').text(response);
+					}
+				});
+			});	
+		</script>	
 	</div>
 </body>
 </html>
