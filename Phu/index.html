@@ -1,0 +1,86 @@
+* Khác nhau : 
+    -Mysqli  Được cải thiện từ MySQL đã được phát triển để tận dụng lợi thế của các tính năng mới được tìm thấy trong các hệ thống MySQL phiên bản 4.1.3 và mới hơn. Các mysqli mở rộng là bao gồm trong PHP 5 và phiên bản sau này.
+    -Việc mở rộng mysqli có rất nhiều lợi thế vượt trội nhưng nổi bật hơn cả là:
+    - giao diện hướng đối tượng
+    - Hỗ trợ sử dụng báo cáo
+    - Cải tiến khả năng tìm lỗi và khắc phục.
+    - Hỗ trợ và nhúng vào server để sử dụng.
+
+
+
+    Mysql  -> 
+    Mysqli -> Hướng  thủ tục
+    PDO    -> Hướng đối tượng
+    chúng ta thấy mysql gọi các hàm, Còn mysqli sử dụng các phương thức (OOP)
+
+    MYSQL
+    <?php
+    $link = mysql_connect ( 'localhost', 'root', '' );
+        if (! $link)
+        {
+         die ( 'Connection failed: ' . mysql_errno () );
+        }
+        $db = mysql_select_db ( 'test2' );
+         
+        if (! $db)
+        {
+         die ( 'Selected database unavailable: ' . mysql_errno () );
+        }
+         
+        // Create and execute a MySQL query
+        $sql = "SELECT artist_name FROM artists";
+        $result = mysql_query ( $sql );
+         
+        // Loop through the returned data and output it
+        while ( $row = mysql_fetch_array ( $result ) )
+        {
+         printf ( "Artist: %s<br />", $row ['artist_name'] );
+        }
+        mysql_free_result ( $result );
+        mysql_close ( $link );
+    ?>
+
+    MSQLI
+    <?php
+        $link = new mysqli ( 'localhost', 'root', '', 'test2' );
+        if (! $link)
+        {
+         die ( 'Connection failed: ' . $link->error () );
+        }
+         
+        $sql = "SELECT artist_name FROM artists";
+        $result = $link->query ( $sql );
+         
+        while ( $row = $result->fetch_assoc () )
+        {
+         printf ( "Artist: %s<br />", $row ['artist_name'] );
+        }
+         
+        $result->close ();
+        $link->close ();
+    ?>
+
+
+    PDO
+    if ($_SERVER ['REQUEST_METHOD'] == 'POST')
+    {
+        // Mo ket noi CSDL
+        $dbinfo = 'mysql:host=localhost;dbname=test2';
+         
+        $user = 'root';
+        $pass = '';
+        $link = new PDO ( $dbinfo, $user, $pass );
+        // Tao va thuc thi truy van SQL
+        $sql = "SELECT album_name FROM albums WHERE artist_id=?";
+        $stmt = $link->prepare ( $sql );
+        if ($stmt->execute ( array (
+                $_POST ['artist'] 
+        ) ))
+        {
+            while ( $row = $stmt->fetch () )
+            {
+                printf ( "Album: %s<br />", $row ['album_name'] );
+            }
+            $stmt->closeCursor ();
+        }
+    }

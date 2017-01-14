@@ -1,5 +1,5 @@
 <?php 
-	$sokw = 190;
+	$sokw = 1000;
 	//cách 1
 	if ( $sokw <= 100 ){
 		echo "Tien dien la : " .$sokw *450 . "đ";
