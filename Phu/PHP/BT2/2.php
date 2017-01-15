@@ -17,7 +17,7 @@
 		            if ( mysqli_insert_id($link) > 0 ) {
 		                header($_SERVER['REQUEST_URI']);
 		            }
-					echo "Upload thanh cong ";
+					
 				}
 			} else {
 				echo "Sai dinh dang file";
@@ -43,6 +43,7 @@
 	</head>
 	<body>
 		<div class="container">
+		
 			<div class="row">
 				   <form action="" method="POST" class="form-horizontal" role="form" enctype="multipart/form-data">
                     <div class="form-group">
@@ -54,7 +55,7 @@
                             <input type="file" class="form-control" name="fileToUpload" id="fileToUpload">
                         </div>
                         <img id="img" src="" style="width: 100px;height: 100px;">
-						<div id="my_file"></div>
+					
                     </div>
                     <div class="form-group">
 						<div class="col-sm-2 col-sm-offset-4">
@@ -62,6 +63,37 @@
 						</div>
 					</div>
 				</form>
+			</div>
+			<div class="row">
+				<div class="table-responsive" style="width: 40%;margin: 10px auto;">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>STT</th>
+								<th>Name</th>
+							</tr>
+						</thead>
+						<?php 
+							$sql = "SELECT * FROM img";
+							$result = mysqli_query($link,$sql);
+							$i = 1;
+							while ($row = mysqli_fetch_assoc( $result ) ) {
+								?>
+									<tr>
+										<td><?php echo $i; ?></td>
+										<td>
+											<img src="<?php echo "uploadfile/".$row['name']; ?>" width="100" height="100">
+										</td>
+									</tr>
+								<?php
+								$i ++;
+							}
+						 ?>
+						<tbody>
+							
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	</body>
@@ -71,6 +103,7 @@
 			var $img = $("#fileToUpload") ;
 		
 			$img.change(function() {
+				//get url of img
 				var tmppath = URL.createObjectURL(event.target.files[0]);
 
 			 	// if ($file.substring(3,11) == 'fakepath') {
