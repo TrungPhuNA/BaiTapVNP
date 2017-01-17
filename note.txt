@@ -1,0 +1,9 @@
+I . CSDL 
+	- Khi tạo csdl thì tạo ít cột càng tốt ( 3NF) -> Nhằm giảm lượng dữ liệu  dư thừa trong CSDL  đồng nghĩa với dữ liệu ít hơn,hệ thống xử lý nhanh hơn
+	- Nên sử dụng constraints  thay vì triggers, rules, hay default,
+	- Sử dụng kiểu dữ liệu hợp lý  ( tinyint, smallmoney,smalldatetime ,varchar/ nvarchar thay cho text/ ntext  , char/varchar thay vì nchar/nvarchar )
+
+II . PHP
+	1. Sự giống và  khác nhau giữa POST và GET 
+	2. Sự giống và khác nhau giữa Session và Coockie
+	3. Biến toàn cục và biến cục bộ !  
